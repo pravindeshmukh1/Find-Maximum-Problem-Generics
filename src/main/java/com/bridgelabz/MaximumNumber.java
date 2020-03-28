@@ -5,7 +5,7 @@ public class MaximumNumber {
         System.out.println("Welcome Find Maximum Number Problem");
     }
 
-    public Integer findMaxValue(Integer first, Integer second, Integer third) {
+    public Integer findMaxIntegerValue(Integer first, Integer second, Integer third) {
 
         Integer maximumNumber = first;
         if (second.compareTo(maximumNumber) > 0)
