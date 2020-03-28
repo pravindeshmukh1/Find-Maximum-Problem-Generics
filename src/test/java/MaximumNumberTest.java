@@ -19,5 +19,11 @@ public class MaximumNumberTest {
         int maxNum = maximumNumber.findMaxValue(100, 400, 200);
         Assert.assertEquals(400, maxNum);
     }
-    
+
+    @Test
+    public void givenThreeIntegerNumber_findMaximumNumber_shouldReturnThirdNo() {
+        MaximumNumber maximumNumber = new MaximumNumber();
+        int maxNum = maximumNumber.findMaxValue(100, 200, 400);
+        Assert.assertEquals(400, maxNum);
+    }
 }
