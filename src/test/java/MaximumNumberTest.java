@@ -2,6 +2,8 @@ import com.bridgelabz.MaximumNumber;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 
 public class MaximumNumberTest {
 
@@ -26,4 +28,13 @@ public class MaximumNumberTest {
         int maxNum = maximumNumber.findMaxIntegerValue(100, 200, 400);
         Assert.assertEquals(400, maxNum);
     }
+    // Float Number
+    @Test
+    public void givenThreeFloatNumber_findMaximumNumber_shouldReturnSameNo() {
+        MaximumNumber maximumNumber = new MaximumNumber();
+        Float maxFloatValue= maximumNumber.findMaxFloatValue(40.40f, 10.10f, 20.20f);
+        System.out.println(maxFloatValue);
+        Assert.assertEquals((Float)40.40f, maxFloatValue);
+    }
+
 }

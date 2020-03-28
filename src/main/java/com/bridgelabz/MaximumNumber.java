@@ -5,14 +5,22 @@ public class MaximumNumber {
         System.out.println("Welcome Find Maximum Number Problem");
     }
 
-    public Integer findMaxIntegerValue(Integer first, Integer second, Integer third) {
+    public Integer findMaxValue(Integer first, Integer second, Integer third) {
 
-        Integer maximumIntegerNumber = first;
-        if (second.compareTo(maximumIntegerNumber) > 0)
-            maximumIntegerNumber = second;
-        if (third.compareTo(maximumIntegerNumber) > 0)
-            maximumIntegerNumber = third;
-        return maximumIntegerNumber;
+        Integer maximumNumber = first;
+        if (second.compareTo(maximumNumber) > 0)
+            maximumNumber = second;
+        if (third.compareTo(maximumNumber) > 0)
+            maximumNumber = third;
+        return maximumNumber;
     }
 
+    public Float findMaxFloatValue(Float firstNo, Float secondNo, Float thirdNo) {
+        Float maximumFloatNumber = firstNo;
+        if (secondNo.compareTo(maximumFloatNumber) > 0.0)
+            maximumFloatNumber = secondNo;
+        if (thirdNo.compareTo(maximumFloatNumber) > 0.0)
+            maximumFloatNumber = thirdNo;
+        return maximumFloatNumber;
+    }
 }
