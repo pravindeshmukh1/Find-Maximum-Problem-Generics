@@ -1,22 +1,24 @@
 package com.bridgelabz;
 
-public class CheckMaximumValue<E extends Comparable> {
-    E first;
-    E second;
-    E third;
+import java.util.Arrays;
+import java.util.Collections;
 
-    public CheckMaximumValue(E first, E second, E third) {
-        this.first = first;
-        this.second = second;
-        this.third = third;
+public class CheckMaximumValue<E extends Comparable> {
+    E[] arrElements;
+
+    public CheckMaximumValue() {
+    }
+
+    public CheckMaximumValue(E[] arrElements) {
+        this.arrElements = arrElements;
+    }
+
+    public static <E extends Comparable> E findMaxValue(E... arrElements) {
+        Arrays.sort(arrElements, Collections.reverseOrder());
+        return arrElements[0];
     }
 
     public E findMaxValue() {
-        E maxValue = first;
-        if (second.compareTo(maxValue) > 0)
-            maxValue = second;
-        if (third.compareTo(maxValue) > 0)
-            maxValue = third;
-        return maxValue;
+        return findMaxValue(arrElements);
     }
 }
