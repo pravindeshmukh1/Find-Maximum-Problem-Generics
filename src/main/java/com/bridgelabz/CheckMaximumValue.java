@@ -6,9 +6,6 @@ import java.util.Collections;
 public class CheckMaximumValue<E extends Comparable> {
     E[] arrElements;
 
-    public CheckMaximumValue() {
-    }
-
     public CheckMaximumValue(E[] arrElements) {
         this.arrElements = arrElements;
     }
@@ -19,6 +16,12 @@ public class CheckMaximumValue<E extends Comparable> {
     }
 
     public E findMaxValue() {
-        return findMaxValue(arrElements);
+        E result = findMaxValue(arrElements);
+        printMax(result);
+        return result;
+    }
+
+    private static <E> void printMax(E result) {
+        System.out.println(result);
     }
 }
