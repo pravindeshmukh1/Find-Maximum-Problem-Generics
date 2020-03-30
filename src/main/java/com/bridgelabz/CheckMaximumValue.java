@@ -1,8 +1,17 @@
 package com.bridgelabz;
 
-public class CheckMaximumValue {
+public class CheckMaximumValue<E extends Comparable> {
+    E first;
+    E second;
+    E third;
 
-    public <E extends Comparable> E findMaxValue(E first, E second, E third) {
+    public CheckMaximumValue(E first, E second, E third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
+    }
+
+    public E findMaxValue() {
         E maxValue = first;
         if (second.compareTo(maxValue) > 0)
             maxValue = second;
