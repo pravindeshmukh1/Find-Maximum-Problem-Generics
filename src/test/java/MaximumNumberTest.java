@@ -3,7 +3,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MaximumNumberTest {
-
     // Integer Number
     @Test
     public void givenThreeIntegerNumber_findMaximumNumber_shouldReturnSameNo() {
@@ -33,12 +32,14 @@ public class MaximumNumberTest {
         Float maxFloatValue = maximumNumber.findMaxFloatValue(40.40f, 10.10f, 20.20f);
         Assert.assertEquals((Float) 40.40f, maxFloatValue);
     }
+
     @Test
     public void givenThreeFloatNumber_findMaximumNumber_shouldReturnSecondNo() {
         MaximumNumber maximumNumber = new MaximumNumber();
         Float maxFloatValue = maximumNumber.findMaxFloatValue(10.10f, 40.40f, 20.20f);
         Assert.assertEquals((Float) 40.40f, maxFloatValue);
     }
+
     @Test
     public void givenThreeFloatNumber_findMaximumNumber_shouldReturnThirdNo() {
         MaximumNumber maximumNumber = new MaximumNumber();
@@ -46,4 +47,11 @@ public class MaximumNumberTest {
         Assert.assertEquals((Float) 40.40f, maxFloatValue);
     }
 
+    //String
+    @Test
+    public void givenThreeString_findMaximumString_shouldReturnSameString() {
+        MaximumNumber maximumString = new MaximumNumber();
+        String maxString = maximumString.findMaxString("Apple", "Banana", "Peach");
+        Assert.assertEquals("Peach", maxString);
+    }
 }

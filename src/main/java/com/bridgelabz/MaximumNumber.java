@@ -23,4 +23,13 @@ public class MaximumNumber {
             maximumFloatNumber = thirdNo;
         return maximumFloatNumber;
     }
+
+    public String findMaxString(String firstString, String secondString, String thirdString) {
+        String  maximumString = firstString;
+        if (secondString.compareTo(maximumString) > 0)
+            maximumString = secondString;
+        if (thirdString.compareTo(maximumString) > 0)
+            maximumString = thirdString;
+        return maximumString;
+    }
 }
