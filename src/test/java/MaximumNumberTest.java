@@ -51,7 +51,7 @@ public class MaximumNumberTest {
     @Test
     public void givenThreeString_findMaximumString_shouldReturnSameString() {
         MaximumNumber maximumString = new MaximumNumber();
-        String maxString = maximumString.findMaxString("Apple", "Banana", "Peach");
+        String maxString = maximumString.findMaxString("Peach", "Banana", "Apple");
         Assert.assertEquals("Peach", maxString);
     }
 }
